@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,
+        800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #042b44;
+            color: white;
+            font-family: "poppins", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(39, 39, 33);
+            height: 65px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 27px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            text-decoration: none;
+            color: rgb(158, 158, 212);
+        }
+
+        .right ul li:hover {
+            transform: scale(1.07);
+            -ms-transform: scale(1.07);
+            -webkit-transform: scale(1.07);
+            transition: 0.1s ease-in-out;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .left a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .first-section {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+
+        .first-section div {
+            width: 50%;
+        }
+
+        .left-section {
+            font-size: 1.8rem;
+            margin: 30px 100px;
+            margin-top: 0;
+        }
+
+        .left-section .buttons {
+            padding: 0 0;
+            display: grid;
+            padding-top: 47px;
+        }
+
+        .left-section .btn {
+            background-color: #01b671;
+            padding: 10px 20px;
+            margin-bottom: 18px;
+            color: white;
+            transition: 0.3s ease-in-out;
+            text-decoration: none;
+            font-size: 17px;
+            border-radius: 80px;
+            border: transparent;
+        }
+
+
+        .left-section .btn:hover {
+            background-color: #31a25e;
+            color: white;
+            cursor: pointer;
+            transform: scale(1.03);
+            -ms-transform: scale(1.03);
+            -webkit-transform: scale(1.03);
+            transition: 0.1s ease-in-out;
+        }
+
+        .spa {
+            color: blueviolet;
+        }
+
+        .ski {
+            padding: 74px;
+        }
+
+        .skill li {
+            list-style: none;
+            margin: 20px 0;
+            padding: 8px;
+        }
+
+        .skill h1 {
+            text-align: center;
+            color: white;
+            font-size: 75px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+
+        .skill h3 {
+            margin: 5px;
+        }
+
+        .skill {
+            background: #333;
+            width: 600px;
+            margin: 0 auto;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        .bar {
+            background: #353b48;
+            display: block;
+            height: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+
+        .bar:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        .bar span {
+            height: 20px;
+            float: left;
+            background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 103, 1)100%);
+        }
+
+        .html {
+            width: 90%;
+        }
+
+        .css {
+            width: 80%;
+        }
+
+        .js {
+            width: 20%;
+        }
+
+        .python {
+            width: 70%;
+        }
+
+        @keyframes html {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        @keyframes css {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 80%;
+            }
+        }
+
+        @keyframes js {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 20%;
+            }
+        }
+
+        @keyframes python {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 70%;
+            }
+        }
+
+        .abo {
+            width: 100%;
+            padding: 23px 0;
+            background-color: rgb(39, 39, 33);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .abo images {
+            width: auto;
+            width: 430px;
+        }
+
+        .abo-tex {
+            width: 550px;
+        }
+
+        .mai {
+            width: 1130px;
+            max-width: 95%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .abo-tex h2 {
+            color: white;
+            letter-spacing: 4px;
+            font-size: 75px;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+
+        .abo-tex h5 {
+            color: white;
+            letter-spacing: 2px;
+            font-size: 22px;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+        }
+
+        .abo-tex h5 span {
+            color: red;
+        }
+
+        .abo-tex p {
+            color: #fcfc;
+            letter-spacing: 1px;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 45px;
+        }
+
+        .left a:hover {
+            cursor: pointer;
+            color: red;
+        }
+
+        .left:hover {
+            transform: scale(1.07);
+            -ms-transform: scale(1.07);
+            -webkit-transform: scale(1.07);
+            transition: 0.3s ease-in-out;
+        }
+
+        .co {
+            color: white;
+        }
+
+        .det {
+            color: rgb(158, 158, 212);
+        }
+
+        #element {
+            color: rgb(158, 158, 212);
+        }
+
+        .second-section {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+            padding-top: 120px;
+            padding-bottom: 15px;
+        }
+
+        .text-gr {
+            color: gray;
+        }
+
+        .second-section .box {
+            background: white;
+            width: 74vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .second-section .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        .img-top {
+            width: 42px;
+            height: 42px;
+            position: relative;
+            top: -47px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+        }
+
+        .vertical-desk {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        footer {
+            background-color: rgb(39, 39, 33);
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .social ul li i {
+            font-size: 32px;
+            color: rgb(158, 158, 212);
+        }
+
+        .footer ul li {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .social ul {
+            display: flex;
+            justify-content: start;
+        }
+
+        .social ul li {
+            margin-right: 20px;
+        }
+
+        .social ul li a i:hover {
+            transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transition: 0.1s ease-in-out;
+        }
+
+        .im {
+            height: 450px;
+            width: 450px;
+            border-radius: 50%;
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .ect {
+            margin-top: 68px;
+            margin-bottom: -39px;
+            color: rgb(158, 158, 212);
+            text-align: center;
+        }
+
+        .ect:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            -webkit-transform: scale(1.05);
+            transition: 0.1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="om">
+        <nav>
+            <div class="left" id="home">
+                <a href="#om">Portfolio</a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="#om">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#om">
+                            Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#abou">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#skills">
+                            Skills
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#exp">
+                            Experience
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="first-section" id="about">
+            <div class="left-section">
+                Hello, My name is
+                <span class="spa">
+                    Mayank <br> Singh Chandel.
+
+                </span>
+                <div>
+                    I am a passionate
+                </div>
+                <span id="element"></span>
+                <div class="ect">
+                    <h4>Projects</h4>
+                </div>
+                <div class="buttons">
+                    <button class="btn"><a href="imagee/Re.jpg">Resume</a></button>
+                    <button class="btn" id="b"><a href="https://github.com/chandel2023/CODSOFT.git">Visit
+                            Github</a></button>
+                    <button class="btn"><a href="cod/index1.html">Project 1</a></button>
+                    <button class="btn"><a href="calc/index4.html">Project 2</a></button>
+                </div>
+            </div>
+            <div class="right-section">
+                <img src="imagee/me.jpg" alt="web" class="im">
+            </div>
+        </section>
+        <section class="abo" id="abou">
+            <div class="mai">
+                <img src="imagee/mee.jpg" alt="Me" class="images">
+                <div class="abo-tex">
+                    <h2>About Me</h2>
+                    <h5>Developer and <span>designer</span></h5>
+                    <p>
+                        I'm Mayank Singh Chandel, currently pursuing my B. Tech in IT.
+                        Although I live in Prayagraj, I consider multiple places as my home.
+                        My educational journey began in Prayagraj, where I completed my High School and Intermediate
+                        studies.
+                        As a Web designer and front-end developer, I excel in creating clean and systematic code that's
+                        easy to comprehend.
+                        I have a knack for incorporating web animations to enhance the dynamism and interactivity of
+                        websites.
+                        With my expertise in responsive web design, I ensure that websites are accessible to users on
+                        any device.
+                        Additionally, I'm also a Python developer.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="ski" id="skills">
+            <div class="skill">
+                <h1>Skills</h1>
+                <li>
+                    <h3>HTML</h3>
+                    <span class="bar"><span class="html"></span></span>
+                </li>
+                <li>
+                    <h3>CSS</h3>
+                    <span class="bar"><span class="css"></span></span>
+                </li>
+                <li>
+                    <h3>JS</h3>
+                    <span class="bar"><span class="js"></span></span>
+                </li>
+                <li>
+                    <h3>PYTHON</h3>
+                    <span class="bar"><span class="python"></span></span>
+                </li>
+            </div>
+        </section>
+        <section class="second-section" id="exp">
+            <span class="text-gr">
+                What i have done so far
+            </span>
+            <h1>
+                Work experience
+            </h1>
+            <div class="box">
+                <div class="vertical">
+                    <img src="imagee/ht1.png" alt="html" class="img-top">
+                    <div class="vertical-title">
+                        HTML developer (2021-22)
+                    </div>
+                    <div class="vertical-desk">
+                        At first, I was a HTML developer.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="imagee/cs1.png" alt="css" class="img-top">
+                    <div class="vertical-title">
+                        CSS developer (2021-22)
+                    </div>
+                    <div class="vertical-desk">
+                        Then, I became a CSS developer.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="imagee/js1.png" alt="js" class="img-top">
+                    <div class="vertical-title">
+                        JS developer (2022-23)
+                    </div>
+                    <div class="vertical-desk">
+                        Then, I became a JS developer.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="imagee/py2.png" alt="python" class="img-top">
+                    <div class="vertical-title">
+                        Python developer (2023-24)
+                    </div>
+                    <div class="vertical-desk">
+                        Then, I became a Python developer.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="imagee/we2.png" alt="web" class="img-top">
+                    <div class="vertical-title">
+                        Full stack Web developer (2024-25)
+                    </div>
+                    <div class="vertical-desk">
+                        At last, I became a Full stack Web developer.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer" id="contact">
+            <div class="footer-first">
+                <h3>
+                    Reach out to me
+                </h3>
+                <div class="social">
+                    <br>
+                    <ul>
+                        <li><a href="https://www.instagram.com/mayanksinghchandel11?igsh=MXc2ZXU3MGYzeDg1bg=="
+                                target="_blank"><i class="fa-brands fa-square-instagram"></i> </a></li>
+                        <li><a href="https://www.facebook.com/mayanksinghchandel11?mibextid=ZbWKwL" target="_blank"><i
+                                    class="fa-brands fa-square-facebook"></i></i></a></li>
+                        <li><a href="http://www.youtube.com/@recazamgarh3110" target="_blank"><i
+                                    class="fa-brands fa-square-youtube"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/mayank-singh-a03043229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-second">
+                <h3>
+                    Contact me
+                </h3>
+                <ul><br>
+                    <li><span class="co">Phone number: </span><span class="det">9580005205</span></li>
+                    <li><span class="co">E-mail id: </span><span class="det">mayanksinghchandel2021@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &copy; www.mayanksportfolio | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web designer', 'Python developer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
